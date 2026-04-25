@@ -35,6 +35,14 @@ from functools import wraps
 from enum import Enum
 from decimal import Decimal, getcontext
 
+# Load environment variables from .env file
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv()
+except ImportError:
+    pass  # python-dotenv not installed, use system env vars
+
 from tenacity import (
     retry,
     stop_after_attempt,

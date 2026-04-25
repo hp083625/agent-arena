@@ -16,12 +16,25 @@ cd agent-arena
 # Install dependencies
 pip install -r requirements.txt
 
-# Set your API key
+# Setup environment variables (choose one method)
+
+# Method 1: Create .env file (recommended - auto-loaded)
+cp .env.example .env
+# Edit .env and add your GEMINI_API_KEY
+
+# Method 2: Export manually
 export GEMINI_API_KEY="your-key-here"
 
 # Run the enhanced agent (recommended)
 python arena_agent_enhanced.py
 ```
+
+### 🔑 Getting Your API Key
+
+1. Get Gemini API key: https://makersuite.google.com/app/apikey
+2. Copy `.env.example` to `.env`
+3. Add your key to `.env` file
+4. **Never commit `.env` to GitHub!** (it's already in `.gitignore`)
 
 ## 📁 Agent Variants
 
