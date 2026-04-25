@@ -11,6 +11,11 @@ Dependencies:
 Usage:
     export GEMINI_API_KEY="your-key"
     python arena_agent_lightweight.py
+# Load environment variables from .env filentry:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # python-dotenv not installed, use system env vars
 """
 
 import asyncio
